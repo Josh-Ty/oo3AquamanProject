@@ -48,7 +48,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="437.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.entrepsim.Controls">
+<VBox prefHeight="440.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.entrepsim.Controls">
   <children>
     <MenuBar VBox.vgrow="NEVER">
          <menus>
@@ -67,20 +67,18 @@
                      <children>
                         <Text layoutX="24.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Money" />
                         <Text fx:id="cash" layoutX="24.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="98.29590545857445" />
-                        <Text layoutX="187.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal" wrappingWidth="44.52952023451235" />
-                        <Text layoutX="188.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1,000,000,000" />
                         <Text layoutX="25.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passive Income (Click on inage to level up):" />
-                        <Text layoutX="24.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lemonade Stand (Cost: 50):" />
+                        <Text fx:id="lemonCost" layoutX="24.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lemonade Stand (Cost: 50):" />
                         <Text fx:id="lemonLVL" layoutX="24.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
                         <ImageView fx:id="lemon" fitHeight="50.0" fitWidth="130.0" layoutX="201.0" layoutY="96.0" onMousePressed="#lemonTrigger" onMouseReleased="#lemonRelease" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@lemon.png" />
                            </image>
                         </ImageView>
-                        <Text layoutX="24.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 1 x Level /sec" />
-                        <Text layoutX="24.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dog Walking (Cost: 500):" />
+                        <Text fx:id="lemonInc" layoutX="24.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
+                        <Text fx:id="dogCost" layoutX="24.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dog Walking (Cost: 475):" />
                         <Text fx:id="dogLVL" layoutX="24.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="24.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 10 x Level /sec" />
+                        <Text fx:id="dogInc" layoutX="24.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
                         <ImageView fx:id="doge" fitHeight="50.0" fitWidth="130.0" layoutX="201.0" layoutY="160.0" onMousePressed="#dogTrigger" onMouseReleased="#dogRelease" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@dog.png" />
@@ -91,12 +89,12 @@
                               <Image url="@resto.png" />
                            </image>
                         </ImageView>
-                        <Text layoutX="24.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant (Cost: 5000):" />
+                        <Text fx:id="restoCost" layoutX="24.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurant (Cost: 4250):" />
                         <Text fx:id="restoLVL" layoutX="24.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="24.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 100 x Level /sec" />
-                        <Text layoutX="24.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Real Estate (Cost: 10000):" />
+                        <Text fx:id="restoInc" layoutX="24.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
+                        <Text fx:id="houseCost" layoutX="24.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Real Estate (Cost: 20000):" />
                         <Text fx:id="houseLVL" layoutX="24.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="24.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 500 x Level /sec" />
+                        <Text fx:id="houseInc" layoutX="24.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
                         <ImageView fx:id="meme" fitHeight="50.0" fitWidth="130.0" layoutX="201.0" layoutY="353.0" onMousePressed="#estateTrigger" onMouseReleased="#estateRelease" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@house.png" />
@@ -107,20 +105,20 @@
                               <Image url="@pharma.png" />
                            </image>
                         </ImageView>
-                        <Text layoutX="24.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmaseuticals (Cost: 15000)" />
+                        <Text fx:id="pharmaCost" layoutX="24.0" layoutY="431.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmaseuticals (Cost: 37500)" />
                         <Text fx:id="pharmaLVL" layoutX="24.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="24.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 1000 x Level /sec" />
+                        <Text fx:id="pharmaInc" layoutX="24.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
                         <ImageView fx:id="field" fitHeight="50.0" fitWidth="130.0" layoutX="201.0" layoutY="222.0" onMousePressed="#riceTrigger" onMouseReleased="#riceRelease" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@rice.png" />
                            </image>
                         </ImageView>
-                        <Text layoutX="24.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rice Fields (Cost: 2500):" />
+                        <Text fx:id="riceCost" layoutX="24.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rice Fields (Cost: 2250):" />
                         <Text fx:id="riceLVL" layoutX="24.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="24.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 50 x Level /sec" />
-                        <Text layoutX="23.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sports Team (Cost: 25000)" />
+                        <Text fx:id="riceInc" layoutX="24.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
+                        <Text fx:id="sportsCost" layoutX="23.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sports Team (Cost: 87500)" />
                         <Text fx:id="sportsLVL" layoutX="24.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="24.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 2500 x Level /sec" />
+                        <Text fx:id="sportsInc" layoutX="24.0" layoutY="528.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
                         <ImageView fx:id="volley" fitHeight="50.0" fitWidth="130.0" layoutX="201.0" layoutY="482.0" onMousePressed="#sportsTrigger" onMouseReleased="#sportsRelease" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@sports.png" />
@@ -141,16 +139,18 @@
                               <Image url="@astro.png" />
                            </image>
                         </ImageView>
-                        <Text layoutX="23.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banks (Cost: 50000)" />
+                        <Text fx:id="bankCost" layoutX="23.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Banks (Cost: 162500)" />
                         <Text fx:id="bankLVL" layoutX="23.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="23.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 5000 x Level /sec" />
-                        <Text layoutX="24.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Space Resort (Cost: 100000)" />
+                        <Text fx:id="bankInc" layoutX="23.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
+                        <Text fx:id="resortCost" layoutX="24.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Space Resort (Cost: 300000)" />
                         <Text fx:id="resortLVL" layoutX="24.0" layoutY="641.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="24.0" layoutY="656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 10000 x Level /sec" />
-                        <Text layoutX="23.0" layoutY="688.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Astroid Mining (Cost: 200000)" />
-                        <Text fx:id="astroidLVL" layoutX="24.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
-                        <Text layoutX="24.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 20000 x Level /sec" />
+                        <Text fx:id="resortInc" layoutX="24.0" layoutY="656.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 0/sec" />
+                        <Text fx:id="asteroidCost" layoutX="23.0" layoutY="688.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asteroid Mining (Cost: 550000)" />
+                        <Text fx:id="asteroidLVL" layoutX="24.0" layoutY="702.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
+                        <Text fx:id="asteroidInc" layoutX="24.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Income: 20000 x Level /sec" />
                         <Text fx:id="passiveIncome" layoutX="25.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 per second" wrappingWidth="111.8837890625" />
+                        <Text fx:id="format" layoutX="207.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" />
+                        <Label fx:id="timer" layoutX="207.0" layoutY="29.0" text="--:--:--" />
                      </children>
                   </AnchorPane>
                </content>
@@ -164,8 +164,6 @@
                         <HBox prefHeight="100.0" prefWidth="200.0">
                            <children>
                               <Region prefHeight="17.0" HBox.hgrow="ALWAYS" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Time Elapsed: " HBox.hgrow="ALWAYS" />
-                              <Label fx:id="timer" text="00:00:00" HBox.hgrow="ALWAYS" />
                               <Region prefHeight="17.0" HBox.hgrow="ALWAYS" />
                            </children>
                         </HBox>
@@ -185,17 +183,17 @@
                               <Image url="@work.png" />
                            </image>
                         </ImageView>
-                        <HBox prefHeight="213.0" prefWidth="296.0" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Region prefHeight="27.0" HBox.hgrow="ALWAYS" />
-                              <Text fx:id="workLVL" strokeType="OUTSIDE" strokeWidth="0.0" text="Click Level 1" />
-                              <Region prefHeight="27.0" HBox.hgrow="ALWAYS" />
-                           </children>
-                        </HBox>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox prefHeight="201.0" prefWidth="296.0" VBox.vgrow="ALWAYS">
                            <children>
                               <Region HBox.hgrow="ALWAYS" />
-                              <Button mnemonicParsing="false" onAction="#workUpgrade" prefWidth="137.0" text="Upgrade Income" HBox.hgrow="ALWAYS" />
+                              <Text fx:id="workLVL" strokeType="OUTSIDE" strokeWidth="0.0" text="Click Level 1" />
+                              <Region HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="347.0">
+                           <children>
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Button fx:id="clickUpgrade" mnemonicParsing="false" onAction="#workUpgrade" prefHeight="26.0" prefWidth="228.0" text="Upgrade Income (Cost: 20)" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
                               <Region HBox.hgrow="ALWAYS" />
                            </children>
                         </HBox>

@@ -5,6 +5,7 @@ public class Resto extends Investment{
         this.level = level;
         this.income = income;
         this.cost = cost;
+        this.initialCost = cost;
     }
     public InvestmentType getType() {
         return InvestmentType.RESTO;
