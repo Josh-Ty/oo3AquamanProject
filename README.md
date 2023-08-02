@@ -17,7 +17,7 @@ Rules:
 Additional Features: 
 + The Investment Shop
 + Clicking
-+ Local Save
++ 2 Different Gamemodes
 + More to come
 
 Reference:
