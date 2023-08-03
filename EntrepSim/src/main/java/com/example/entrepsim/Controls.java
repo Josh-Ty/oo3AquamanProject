@@ -20,16 +20,16 @@ import static java.lang.Math.pow;
 import static java.lang.Math.round;
 
 public class Controls {
-    Lemonade lemonade = new Lemonade(0,1,50);
-    Dog dog = new Dog(0,10,475);
-    Rice rice = new Rice(0,50,2250);
-    Resto resto = new Resto(0,100,4250);
-    Estate estate = new Estate(0,500,20000);
-    Pharma pharma = new Pharma(0,1000,37500);
-    Sports sports = new Sports(0,2500,87500);
-    Stock stock = new Stock(0,5000,162500);
-    Space space = new Space(0,10000,300000);
-    Astro astro = new Astro(0,20000,550000);
+    Lemonade lemonade = new Lemonade();
+    Dog dog = new Dog();
+    Rice rice = new Rice();
+    Resto resto = new Resto();
+    Estate estate = new Estate();
+    Pharma pharma = new Pharma();
+    Sports sports = new Sports();
+    Stock stock = new Stock();
+    Space space = new Space();
+    Astro astro = new Astro();
     private static long finalScore;
     private double activeLVL = 1;
     private static long elapsedTime;
@@ -219,7 +219,7 @@ public class Controls {
         sleeper.setOnSucceeded(workerStateEvent ->
         {
             if(mode == 1){
-                if(money == 1000000000){
+                if(money >= 1000000000){
                     try {
                         modeLegacy = mode;
                         finalScore = elapsedTime;
@@ -308,8 +308,8 @@ public class Controls {
             money = money - activeCost;
             cash.setText(String.valueOf(String.format("%.0f", money)));
             count++;
-            clickUpgrade.setText("Upgrade Income (Cost: "+ (round(20*pow(1.5,count))) +")");
-            activeCost = (round(20*pow(1.5,count)));
+            clickUpgrade.setText("Upgrade Income (Cost: "+ (round(20*pow(1.4,count))) +")");
+            activeCost = (round(20*pow(1.4,count)));
             activeLVL++;
             workLVL.setText("Click Level "+String.format("%.0f", activeLVL));
     }}

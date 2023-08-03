@@ -1,11 +1,14 @@
 package com.example.entrepsim;
 
 public class Pharma extends Investment{
-    public Pharma(int level, int income, long cost){
-        this.level = level;
-        this.income = income;
-        this.cost = cost;
-        this.initialCost = cost;
+    int initializedLevel = 0;
+    int initializedIncome = 1000;
+    long initializedCost = 37500;
+    public Pharma(){
+        this.level = initializedLevel;
+        this.income = initializedIncome;
+        this.cost = initializedCost;
+        this.initialCost = initializedCost;
     }
     public InvestmentType getType() {
         return InvestmentType.PHARMA;
