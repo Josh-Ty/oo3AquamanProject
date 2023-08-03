@@ -1,0 +1,202 @@
+@startuml
+set separator ::
+package com.example.entrepsim{
+class Controls {
+~ Lemonade lemonade
+~ Dog dog
+~ Rice rice
+~ Resto resto
+~ Estate estate
+~ Pharma pharma
+~ Sports sports
+~ Stock stock
+~ Space space
+~ Astro astro
+- {static} long finalScore
+- double activeLVL
+- {static} long elapsedTime
+- long passive
+~ boolean startTime
+- double money
+- Stage primaryStage
+~ int mode
+- {static} int modeLegacy
+~ Text score
+~ ImageView muskMode
+~ ImageView timeMode
+~ Text format
+~ ImageView work
+~ Text workLVL
+~ Button clickUpgrade
+~ ImageView lemon
+~ Text lemonLVL
+~ Text lemonCost
+~ Text lemonInc
+~ ImageView doge
+~ Text dogLVL
+~ Text dogCost
+~ Text dogInc
+~ ImageView field
+~ Text riceLVL
+~ Text riceCost
+~ Text riceInc
+~ ImageView fazbear
+~ Text restoLVL
+~ Text restoCost
+~ Text restoInc
+~ ImageView meme
+~ Text houseLVL
+~ Text houseCost
+~ Text houseInc
+~ ImageView pills
+~ Text pharmaLVL
+~ Text pharmaCost
+~ Text pharmaInc
+~ ImageView volley
+~ Text sportsLVL
+~ Text sportsCost
+~ Text sportsInc
+~ ImageView stonks
+~ Text bankLVL
+~ Text bankCost
+~ Text bankInc
+~ ImageView stickmin
+~ Text resortLVL
+~ Text resortCost
+~ Text resortInc
+~ ImageView astroImage
+~ Text asteroidLVL
+~ Text asteroidCost
+~ Text asteroidInc
+~ Text cash
+~ Label timer
+~ Text passiveIncome
+~ Button Start
+~ int count
+~ long activeCost
++ void quitButtonClick()
++ void mainMenuClick(ActionEvent)
++ void Leaderboard(ActionEvent)
++ void GameStart(ActionEvent)
++ void muskStart(MouseEvent)
++ void timeStart(MouseEvent)
++ void muskHover(MouseEvent)
++ void muskExit(MouseEvent)
++ void timeHover(MouseEvent)
++ void timeExit(MouseEvent)
+- void watch(MouseEvent)
++ void workTrigger(MouseEvent)
++ void scoreClick(MouseEvent)
++ void workRelease(MouseEvent)
++ void workUpgrade(ActionEvent)
++ void lemonTrigger(MouseEvent)
++ void lemonRelease(MouseEvent)
++ void dogTrigger(MouseEvent)
++ void dogRelease(MouseEvent)
++ void riceTrigger(MouseEvent)
++ void riceRelease(MouseEvent)
++ void restoTrigger(MouseEvent)
++ void restoRelease(MouseEvent)
++ void estateTrigger(MouseEvent)
++ void estateRelease(MouseEvent)
++ void pharmaTrigger(MouseEvent)
++ void pharmaRelease(MouseEvent)
++ void sportsTrigger(MouseEvent)
++ void sportsRelease(MouseEvent)
++ void stockTrigger(MouseEvent)
++ void stockRelease(MouseEvent)
++ void spaceTrigger(MouseEvent)
++ void spaceRelease(MouseEvent)
++ void astroTrigger(MouseEvent)
++ void astroRelease(MouseEvent)
+}
+class EntrepSim {
++ void start(Stage)
++ {static} void main(String[])
+}
+class Sports {
++ Sports(int level, int income, long cost)
++ InvestmentType getType()
+}
+class Estate {
++ Estate(int level, int income, long cost)
++ InvestmentType getType()
+}
+class Pharma {
++ Pharma(int level, int income, long cost)
++ InvestmentType getType()
+}
+enum InvestmentType {
++  LEMONADE
++  DOG
++  RICE
++  RESTO
++  ESTATE
++  PHARMA
++  SPORTS
++  STOCK
++  SPACE
++  ASTRO
+}
+class Space {
++ Space(int level, int income, long cost)
++ InvestmentType getType()
+}
+class Resto {
++ Resto(int level, int income, long cost)
++ InvestmentType getType()
+}
+class Rice {
++ Rice(int level, int income, long cost)
++ InvestmentType getType()
+}
+abstract class Investment {
+# int level
+# int income
+# long cost
+# long initialCost
++ int update(int,int)
++ int upgrade(int)
++ long newPrice()
++ long upgrade(long)
++ void setLevel(int)
++ void setIncome(int)
++ void setCost(long)
++ int getLevel()
++ int getIncome()
++ long getCost()
+}
+class Dog {
++ Dog(int level, int income, long cost)
++ InvestmentType getType()
+}
+class Lemonade {
++ Lemonade(int level, int income, long cost)
++ InvestmentType getType()
+}
+class Stock {
++ Stock(int level, int income, long cost)
++ InvestmentType getType()
+}
+class Astro {
++ Astro(int level, int income, long cost)
++ InvestmentType getType()
+}
+}
+package javafx.application{
+class Application{}
+}
+Application <|-- EntrepSim
+Controls <|-- Investment
+EntrepSim <|-- Controls
+Investment <|-- Sports
+Investment <|-- Estate
+Investment <|-- Pharma
+Investment <|-- Space
+Investment <|-- Resto
+Investment <|-- Rice
+Investment <|-- Dog
+Investment <|-- Lemonade
+Investment <|-- Stock
+Investment <|-- Astro
+@enduml
