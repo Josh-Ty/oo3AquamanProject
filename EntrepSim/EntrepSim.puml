@@ -1,4 +1,5 @@
 @startuml
+title __Entrepreneur Simulator PUML Diagram__
 set separator ::
 package com.example.entrepsim{
 class Controls {
@@ -115,15 +116,24 @@ class EntrepSim {
 + {static} void main(String[])
 }
 class Sports {
-+ Sports(int level, int income, long cost)
++ Sports()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 class Estate {
-+ Estate(int level, int income, long cost)
++ Estate()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 class Pharma {
-+ Pharma(int level, int income, long cost)
++ Pharma()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 enum InvestmentType {
@@ -139,15 +149,24 @@ enum InvestmentType {
 +  ASTRO
 }
 class Space {
-+ Space(int level, int income, long cost)
++ Space()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 class Resto {
-+ Resto(int level, int income, long cost)
++ Resto()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 class Rice {
-+ Rice(int level, int income, long cost)
++ Rice()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 abstract class Investment {
@@ -167,19 +186,31 @@ abstract class Investment {
 + long getCost()
 }
 class Dog {
-+ Dog(int level, int income, long cost)
++ Dog()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 class Lemonade {
-+ Lemonade(int level, int income, long cost)
++ Lemonade()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 class Stock {
-+ Stock(int level, int income, long cost)
++ Stock()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 class Astro {
-+ Astro(int level, int income, long cost)
++ Astro()
+~ int initializedLevel
+~ int initializedIncome
+~ long initializedCost
 + InvestmentType getType()
 }
 }
