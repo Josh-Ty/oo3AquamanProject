@@ -25,7 +25,7 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button mnemonicParsing="false" onAction="#Leaderboard" text="Credits">
+      <Button mnemonicParsing="false" onAction="#Credits" text="Credits">
          <font>
             <Font size="20.0" />
          </font>
