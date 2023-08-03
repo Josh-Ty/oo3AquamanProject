@@ -26,3 +26,6 @@ Initial References:
     + What makes our game stand out compared to other games is that we incorporate 2 subgenres of the game into one, which will utilize           split canvas display to make it happen, and that it is a time-trial leaderboard that records how fast a player can reach a set              monetary goal, which other games usually don't have, as they are designed to be endless.
 + Cookie Clickers
     + The game won't just be a cookie clicker that requires endless monotonous clicking, but more akin to starting a timer for a task to be       able to actually generate revenue.
+
+Demo:
+https://youtu.be/ly1gqyRT6mc 
