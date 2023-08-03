@@ -67,7 +67,7 @@
                      <children>
                         <Text layoutX="24.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Money" />
                         <Text fx:id="cash" layoutX="24.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="98.29590545857445" />
-                        <Text layoutX="25.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passive Income (Click on inage to level up):" />
+                        <Text layoutX="25.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passive Income (Click on image to level up):" />
                         <Text fx:id="lemonCost" layoutX="24.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lemonade Stand (Cost: 50):" />
                         <Text fx:id="lemonLVL" layoutX="24.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level 0" />
                         <ImageView fx:id="lemon" fitHeight="50.0" fitWidth="130.0" layoutX="239.0" layoutY="97.0" onMousePressed="#lemonTrigger" onMouseReleased="#lemonRelease" pickOnBounds="true" preserveRatio="true">
