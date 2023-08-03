@@ -155,7 +155,7 @@ public class Controls {
         primaryStage.setTitle("Entrepreneur Simulator");
         primaryStage.show();
     }
-    public void Leaderboard(ActionEvent event) throws IOException {
+    public void Credits(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(EntrepSim.class.getResource("Credits.fxml"));
         primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
