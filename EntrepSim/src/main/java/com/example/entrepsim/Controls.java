@@ -1,8 +1,6 @@
 package com.example.entrepsim;
 
 import javafx.application.Platform;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.effect.ImageInput;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -320,7 +317,7 @@ public class Controls {
         if(money >= lemonade.getCost()){
             money += lemonade.upgrade(lemonade.getCost());
             passive = passive + lemonade.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             lemonade.upgrade(lemonade.getLevel());
             lemonade.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/lemonGood.png");
@@ -343,7 +340,7 @@ public class Controls {
         if(money >= dog.getCost()){
             money += dog.upgrade(dog.getCost());
             passive = passive + dog.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             dog.upgrade(dog.getLevel());
             dog.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/dogGood.png");
@@ -366,7 +363,7 @@ public class Controls {
         if(money >= rice.getCost()){
             money += rice.upgrade(rice.getCost());
             passive = passive + rice.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             rice.upgrade(rice.getLevel());
             rice.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/riceGood.png");
@@ -389,7 +386,7 @@ public class Controls {
         if(money >= resto.getCost()){
             money += resto.upgrade(resto.getCost());
             passive = passive + resto.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             resto.upgrade(resto.getLevel());
             resto.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/restoGood.png");
@@ -412,7 +409,7 @@ public class Controls {
         if(money >= estate.getCost()){
             money += estate.upgrade(estate.getCost());
             passive = passive + estate.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             estate.upgrade(estate.getLevel());
             estate.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/houseGood.png");
@@ -435,7 +432,7 @@ public class Controls {
         if(money >= pharma.getCost()){
             money += pharma.upgrade(pharma.getCost());
             passive = passive + pharma.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             pharma.upgrade(pharma.getLevel());
             pharma.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/pharmaGood.png");
@@ -458,7 +455,7 @@ public class Controls {
         if(money >= sports.getCost()){
             money += sports.upgrade(sports.getCost());
             passive = passive + sports.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             sports.upgrade(sports.getLevel());
             sports.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/sportsGood.png");
@@ -481,7 +478,7 @@ public class Controls {
         if(money >= stock.getCost()){
             money += stock.upgrade(stock.getCost());
             passive = passive + stock.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             stock.upgrade(stock.getLevel());
             stock.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/bankGood.png");
@@ -504,7 +501,7 @@ public class Controls {
         if(money >= space.getCost()){
             money += space.upgrade(space.getCost());
             passive = passive + space.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             space.upgrade(space.getLevel());
             space.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/resortGood.png");
@@ -527,7 +524,7 @@ public class Controls {
         if(money >= astro.getCost()){
             money += astro.upgrade(astro.getCost());
             passive = passive + astro.getIncome();
-            passiveIncome.setText(String.valueOf(passive)+" per second");
+            passiveIncome.setText(passive+" per second");
             astro.upgrade(astro.getLevel());
             astro.newPrice();
             Image good = new Image("file:src/main/resources/com/example/entrepsim/astroGood.png");
